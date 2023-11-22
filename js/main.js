@@ -40,7 +40,7 @@ biciElement.innerHTML = `La bici con peso minore è la ${biciMinorePeso.nome} co
 
 /* SECOND SNACK */
 
-/* const soccerTeams = [
+const soccerTeams = [
     {
         nome: 'Roma',
         puntiFatti: '',
@@ -102,6 +102,12 @@ const falliRandom = generaFalliRandom();
 assegnaNumeriRandom(soccerTeams, puntiRandom, falliRandom);
 
 
-stampaSquadre(soccerTeams); */
+stampaSquadre(soccerTeams);
 
+function filtraSquadre(squadre) {
+    return squadre.map(({ nome, falliSubiti }) => ({ nome, falliSubiti }));
+}
+
+const squadreFiltrate = filtraSquadre(soccerTeams);
+console.log(squadreFiltrate);
 
